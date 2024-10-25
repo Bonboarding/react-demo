@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import BonboardingIntegration from './components/BonboardingIntegration';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Login from './components/Login';
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="*" element={
             <AuthGuard>
               <>
+                <BonboardingIntegration />
                 <div className="flex h-screen bg-gray-100">
                   <Sidebar />
                   <div className="flex-1 flex flex-col overflow-hidden">
